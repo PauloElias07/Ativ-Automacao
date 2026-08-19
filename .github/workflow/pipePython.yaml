@@ -6,12 +6,13 @@ on:
 
 
 jobs:
-  calcu:
+  teste_soma:
     runs-on: ubuntu-latest
-
     steps: 
-    - name: configurar python
-      uses: actions/setup-python@v5
+    - name: pull repositorio
+      uses: actions/checkout@v3
+    - name: configurar dependencias
+      uses: actions/setup-python@v4
       with:
         python-version: "3.12"
 
