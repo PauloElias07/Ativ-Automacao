@@ -9,9 +9,10 @@ jobs:
   teste_soma:
     runs-on: ubuntu-latest
     steps: 
-    - name: pull repositorio
+    - name: download repositorio
       uses: actions/checkout@v3
-    - name: configurar dependencias
+      
+    - name: configurar python
       uses: actions/setup-python@v4
       with:
         python-version: "3.12"
@@ -19,6 +20,61 @@ jobs:
     - name: instalar dependências
       run: pip install pytest
 
-    - name: instalar dependências
-      run: pip install pytest
+    - name: testar soma
+      run: pytest test_soma.py -v
       
+  
+  teste_sub:
+      runs-on: ubuntu-latest
+      steps: 
+      - name: download repositorio
+        uses: actions/checkout@v3
+        
+      - name: configurar python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+  
+      - name: instalar dependências
+        run: pip install pytest
+  
+      - name: testar subtracao
+        run: pytest test_sub.py -v
+
+
+  test_multi:
+      runs-on: ubuntu-latest
+      steps: 
+      - name: download repositorio
+        uses: actions/checkout@v3
+        
+      - name: configurar python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+  
+      - name: instalar dependências
+        run: pip install pytest
+  
+      - name: testar multiplicacao
+        run: pytest test_multi.py -v
+
+
+  test_divi:
+      runs-on: ubuntu-latest
+      steps:
+      - name: download repositorio
+        uses: actions/checkout@v3
+
+      - name: configurar python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: instalar dependencias
+        run: pip install pytest
+
+      - name: teste divisao
+        run: pytest test_divi.py -v
+
+    
