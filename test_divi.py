@@ -8,4 +8,9 @@ def test_divi_zero():
     with pytest.raises(ValueError):
         divi(10, 0)
 
-while test_divi == True
+while:
+    True
+    test_divi()
+    test_divi_zero()
+    print("Testes passaram!")
+    time.sleep(1)
