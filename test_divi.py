@@ -9,8 +9,8 @@ def test_divi_zero():
         divi(10, 0)
 
 while:
-    True
-    test_divi()
-    test_divi_zero()
-    print("Testes passaram!")
-    time.sleep(1)
+    True:
+        test_divi()
+        test_divi_zero()
+        print("Testes passaram!")
+        time.sleep(1)
