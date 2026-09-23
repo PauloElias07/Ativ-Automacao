@@ -7,3 +7,5 @@ def test_divi():
 def test_divi_zero():
     with pytest.raises(ValueError):
         divi(10, 0)
+
+while test_divi == True
